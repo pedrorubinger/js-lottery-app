@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pedro Henrique Pimenta Rubinger">
+    <title>LabLuby Lottery</title>
+    <link rel="stylesheet" type="text/css" href="./styles/global.css">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+</head>
+<body>
+    <div id="container">
+        <main>
+            <header>
+                <div class="alert">
+                    <p><!-- ALERT MESSAGE --></p>
+                </div>
+                <!-- <h1>LabLuby Loterias</h1> -->
+                <h2>Preencha sua aposta</h2>
+                <p>
+                    Escolha de 15 a 18 números para apostar. Você ganha acertando 
+                    11, 12, 13, 14 ou 15 números. <br>São muitas chances de ganhar, 
+                    e agora você joga de onde estiver!
+                </p>
+            </header>
+
+            <section id="numbers-board">
+                <!-- CARD NUMBERS (1, 2, 3, ..., 25) -->
+            </section>
+
+            <section id="board-handling">
+                <button
+                    id="complete-game-button"
+                    class="button"
+                    title="Completar automaticamente o restante"
+                >
+                    Completar o jogo
+                </button>
+
+                <button
+                    id="clear-game-button"
+                    class="button"
+                    title="Limpar números selecionados"
+                >
+                    Limpar o volante
+                </button>
+
+                <button 
+                    id="save-game-button"
+                    class="button green-button"
+                    title="Salvar números selecionados"
+                >
+                    Salvar
+                </button>
+            </section>
+        </main>
+    
+        <aside>
+            <h2>Apostas Feitas</h2>
+            
+            <section id="games">
+                <p class="initial-message"><!-- MESSAGE --></p>
+                <!-- GAMES -->
+            </section>
+    
+            <section id="lottery-draw">
+                <h2>
+                    Sorteio
+                    <span 
+                        id="random-button"
+                        title="Sortear resultado pseudoaleatório"
+                    >?</span>
+                </h2>
+                
+                <div id="result">
+                    <form id="insert-result-form">
+                        <input
+                            id="input-winning-numbers"
+                            type="text"
+                            autofocus
+                            placeholder="Inserir números vencedores">
+                        </input>
+                        <button
+                            class="button green-button"
+                            title="Insira números vencedores"
+                        >
+                            Ok
+                        </button>
+                    </form>
+
+                    <p id="winning-numbers"><!-- WINNING NUMBERS --></p>
+                </div>
+                
+                <div id="games-result">
+                    <p class="initial-message"><!-- MESSAGE --></p>
+                    <!-- GAMES RESULT -->
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/events.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>

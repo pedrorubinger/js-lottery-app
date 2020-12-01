@@ -1,0 +1,280 @@
+div#container {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: rgb(119, 119, 119);
+    max-width: 1350px;
+    margin: auto;
+    margin-top: 7vh;
+}
+
+div#container main, div#container aside {
+    padding: 20px;
+    margin-left: 1%;
+}
+
+/* MAIN/NUMBERS BOARD */
+div#container main {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 50%;
+}
+
+main section#numbers-board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+main section#numbers-board div.card-number {
+    background-color: rgb(219, 219, 219);
+    margin: 8px 0;
+    border-radius: 50%;
+    border: 1px solid rgb(201, 201, 201);
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    transition: .5s;
+}
+
+main section#numbers-board div.card-number:hover {
+    background-color: rgb(145, 18, 145);
+    border: 1px solid rgb(80, 2, 80);
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 0px 0px 1px #ffffff;
+}
+
+main section#numbers-board div.picked-card-number {
+    background-color: #51e685;
+    border: 1px solid #06e044;
+    text-shadow: 0px 1px 1px grey;
+    color: #ffffff;
+    margin: 8px 0;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    transition: .5s;
+}
+
+main section#numbers-board div.picked-card-number:hover {
+    background-color: #28e068;
+    border: 1px solid #06e044;
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 0px 0px 1px #ffffff;
+}
+
+main section#numbers-board span {
+    line-height: 60px;
+}
+
+/* ASIDE */
+aside {
+    width: 30%;
+}
+
+/* GAMES */
+aside section#games {
+    max-height: 130px;
+    overflow: auto;
+}
+
+aside div.game {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+aside div.game:not(:last-child) {
+    border-bottom: 1px solid rgb(201, 201, 201);
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+}
+
+aside div.game span.game-id {
+    font-size: 21px;
+}
+
+aside div.game span.game-numbers {
+    width: 75%;
+    font-size: 15px;
+    overflow-wrap: break-word;
+}
+
+aside div.game span.close-button {
+    color: rgb(253, 74, 74);
+    height: 0;
+    transition: .4s;
+}
+
+aside div.game span.close-button:hover {
+    cursor: pointer;
+    color: rgb(168, 10, 10);
+    font-size: 16.5px;
+}
+
+/* LOTTERY DRAW */
+aside section#lottery-draw {
+    margin-top: 35px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 6px;
+    padding: 4% 7%;
+    min-height: 200px;
+    box-shadow: -1px 2px 5px rgb(211, 211, 211);
+}
+
+aside section#lottery-draw h2 {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+
+aside section#lottery-draw h2 span#random-button {
+    font-size: 13px;
+    background-color: rgb(247, 199, 70);
+    padding: 2px 8px;
+    height: 23px;
+    border: 1px solid rgb(241, 181, 69);
+    border-radius: 4px;
+    color: #ffffff;
+    margin-left: 8px;
+    align-items: center;
+    opacity: .95;
+    transition: .4s;
+}
+
+aside section#lottery-draw h2 span#random-button:hover {
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgb(255, 186, 58);
+}
+
+aside section#lottery-draw div#result {
+    border-bottom: 1px solid rgb(219, 219, 219);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+aside section#lottery-draw form#insert-result-form {
+    display: flex;
+}
+
+aside section#lottery-draw form#insert-result-form input {
+    max-width: 80%;
+    margin-right: 4%;
+}
+
+/* GAME RESULT */
+aside section#lottery-draw div#games-result {
+    overflow: auto;
+    max-height: 120px;
+}
+
+aside section#lottery-draw div#games-result p:first-child {
+    margin: 0;
+}
+
+aside section#lottery-draw div#gmaes-result p.score {
+    overflow-wrap: break-word;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 980px) {
+    aside div.game span.game-id {
+        font-size: 16px;
+    }
+    
+    aside div.game span.game-numbers {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 880px) {
+    div#container {
+        flex-direction: column;
+        align-items: center;
+        margin: 10vh auto;
+    }
+
+    div#container main {
+        display: flex;
+        flex-direction: column;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    main section#numbers-board {
+        justify-items: center;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    aside section#games {
+        margin-top: 25px;
+        max-height: 330px;
+        overflow: auto;
+    }
+
+    aside section#lottery-draw {
+        margin-top: 35px;
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 6px;
+        padding: 4% 7%;
+        min-height: 200px;
+        box-shadow: -1px 2px 5px rgb(211, 211, 211);
+    }
+
+    aside section#lottery-draw form#insert-result-form input {
+        width: 100%;
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 470px) {
+    main section#numbers-board div.card-number,
+    main section#numbers-board div.picked-card-number {
+        margin: 8px 0;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+    }
+
+    main section#numbers-board span {
+        line-height: 45px;
+    }
+}
+
+@media (max-width: 360px) {
+    main section#numbers-board {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+
+    section#board-handling {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside section#lottery-draw form#insert-result-form { 
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    aside section#lottery-draw form#insert-result-form input,
+    aside section#lottery-draw form#insert-result-form button {
+        max-width: 100%;
+        margin: 0;
+        margin-top: 15px;
+        padding: 10px;
+    }
+}

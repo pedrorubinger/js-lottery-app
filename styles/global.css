@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 26px;
+    margin: 15px auto;
+    color: rgb(128, 128, 128);
+    text-shadow: 0px 1px 0px rgb(199, 199, 199);
+}
+
+p {
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+input {
+    padding: 7px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgb(219, 219, 219);
+}
+
+.button {
+    padding: 10px;
+    margin-right: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid rgb(26, 78, 146);
+    background-color: rgb(63, 120, 194);
+    color: #ffffff;
+    transition: .4s;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(45, 93, 155);
+}
+
+.button.green-button:disabled, .button:disabled {
+    opacity: .5;
+}
+
+.button:disabled:hover {
+    cursor: auto;
+    background-color: rgb(63, 120, 194);
+}
+
+/* GREEN BUTTON */
+.button.green-button {
+    background-color: rgb(86, 204, 102);
+    border: 1px solid rgb(21, 187, 76);
+}
+
+.button.green-button:hover {
+    background-color: rgb(51, 194, 70);
+}
+
+.button.green-button:disabled:hover {
+    background-color: rgb(86, 204, 102);
+    cursor: auto;
+}
+
+.alert {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 400px;
+    width: 80%;
+    opacity: .8;
+    transition: .4s;
+    display: none;
+}
+
+.alert p {
+    background-color: rgb(216, 79, 79);
+    position: relative;
+    left: -50%;
+    padding: 10px 25px;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert:hover {
+    opacity: 1;
+}
+
+p.initial-message {
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.default-border {
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.invalid-border {
+    border: 1px solid #d84343;
+}
+
+.golden-numbers {
+    color: #DAA520;
+    margin: 15px auto 7px auto;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 450px) {
+    .button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .button {
+        margin-top: 8px;
+    }
+}
